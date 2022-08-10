@@ -1121,7 +1121,7 @@ WheelJoint2D:
     m_Angle: 90
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 10
     m_MaximumMotorForce: 10000
 --- !u!50 &936542290
 Rigidbody2D:
@@ -2013,7 +2013,7 @@ WheelJoint2D:
     m_Angle: 90
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 10
     m_MaximumMotorForce: 10000
 --- !u!50 &1556492394
 Rigidbody2D:
