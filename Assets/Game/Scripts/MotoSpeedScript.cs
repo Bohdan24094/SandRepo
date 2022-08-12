@@ -4,26 +4,15 @@ using UnityEngine;
 
 public class MotoSpeedScript : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody2D;
-
-    public float moveSpeed = 15f;
-
-    private void Awake()
-    {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
-
+    public Rigidbody2D rb;
+    public float forwardForce = 100f;
     
-    void Update()
+private void FixedUpdate()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetButton("GasButton"))
         {
-            _rigidbody2D.AddForce(new Vector2 (moveSpeed , 0f));
+            rb.AddForce(new Vector2(forwardForce, 0f));
         }
+        
     }
 }
