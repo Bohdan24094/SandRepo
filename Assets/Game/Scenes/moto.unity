@@ -341,12 +341,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22851000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27932876, y: 0.09325016, z: -0.9}
-  m_LocalScale: {x: 1.0540714, y: 1.097061, z: 1}
+  m_LocalPosition: {x: -0.76500016, y: -0.6380001, z: -0.8999939}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2044450605}
-  m_RootOrder: 0
+  m_Father: {fileID: 1441074951}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &22851002
 SpriteRenderer:
@@ -864,7 +864,7 @@ GameObject:
   - component: {fileID: 758882621}
   - component: {fileID: 758882620}
   m_Layer: 0
-  m_Name: wheel
+  m_Name: frontWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,8 +881,7 @@ Transform:
   m_LocalPosition: {x: 1.081, y: -0.511, z: 0}
   m_LocalScale: {x: 0.9301144, y: 0.9239184, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1903475553}
+  m_Children: []
   m_Father: {fileID: 1441074951}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1639,7 +1638,7 @@ GameObject:
   - component: {fileID: 1441074948}
   - component: {fileID: 1441074952}
   m_Layer: 0
-  m_Name: body
+  m_Name: motoFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1807,7 +1806,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 758882619}
+  - {fileID: 1903475553}
   - {fileID: 2044450605}
+  - {fileID: 22851001}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2043,8 +2044,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1903475553}
   - component: {fileID: 1903475554}
-  - component: {fileID: 1903475555}
   - component: {fileID: 1903475556}
+  - component: {fileID: 1903475557}
   m_Layer: 0
   m_Name: stok
   m_TagString: Untagged
@@ -2059,13 +2060,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903475552}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09353677, y: 0.20348111, z: 0}
-  m_LocalScale: {x: 1.0751365, y: 1.0823466, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9940001, y: -0.32300004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 758882619}
-  m_RootOrder: 0
+  m_Father: {fileID: 1441074951}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1903475554
 SpriteRenderer:
@@ -2119,27 +2120,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1818360608 &1903475555
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903475552}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0.994, y: -0.32299998, z: -210}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 758882619}
-    weight: 1
---- !u!1183024399 &1903475556
-LookAtConstraint:
+--- !u!895512359 &1903475556
+AimConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2149,12 +2131,45 @@ LookAtConstraint:
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_Roll: 0
+  m_AimVector: {x: 0, y: 0, z: 1}
+  m_UpVector: {x: 0, y: 1, z: 0}
+  m_WorldUpVector: {x: 0, y: 1, z: 0}
   m_WorldUpObject: {fileID: 0}
-  m_UseUpObject: 1
+  m_UpType: 0
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
   m_IsContraintActive: 0
   m_IsLocked: 0
-  m_Sources: []
+  m_Sources:
+  - sourceTransform: {fileID: 1441074951}
+    weight: 1
+--- !u!1773428102 &1903475557
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903475552}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: -0.09353677, y: 0.20348111, z: 0}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 758882619}
+    weight: 1
 --- !u!1 &1974721118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2376,7 @@ GameObject:
   - component: {fileID: 2044450607}
   - component: {fileID: 2044450606}
   m_Layer: 0
-  m_Name: wheel
+  m_Name: backWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2378,10 +2393,9 @@ Transform:
   m_LocalPosition: {x: -1.03, y: -0.723, z: 0}
   m_LocalScale: {x: 0.9487024, y: 0.9115263, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 22851001}
+  m_Children: []
   m_Father: {fileID: 1441074951}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2044450606
 CircleCollider2D:
