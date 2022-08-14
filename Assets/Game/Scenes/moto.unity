@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22851001}
   - component: {fileID: 22851002}
+  - component: {fileID: 22851004}
   - component: {fileID: 22851003}
   m_Layer: 0
   m_Name: sus
@@ -386,9 +387,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1312114299
-  m_SortingLayer: 13
-  m_SortingOrder: 0
+  m_SortingLayerID: -1032163527
+  m_SortingLayer: 10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: a09f166d7e711fc4b9442a64870aa4a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -400,7 +401,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1818360608 &22851003
+--- !u!1183024399 &22851003
+LookAtConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22851000}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_Roll: 0
+  m_WorldUpObject: {fileID: 0}
+  m_UseUpObject: 0
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 1441074951}
+    weight: 1
+--- !u!1818360608 &22851004
 PositionConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,7 +429,7 @@ PositionConstraint:
   m_GameObject: {fileID: 22851000}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: -0.765, y: -0.63799995, z: -210}
+  m_TranslationAtRest: {x: -0.76500016, y: -0.6380001, z: -0.8999939}
   m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
@@ -791,7 +811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1389, y: -2, z: 0}
+  m_LocalPosition: {x: -1386, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -940,7 +960,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1032163527
   m_SortingLayer: 10
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 9918356e07003e94586a7091efeec5c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1595,6 +1615,8 @@ GameObject:
   - component: {fileID: 1441074948}
   - component: {fileID: 1441074953}
   - component: {fileID: 1441074954}
+  - component: {fileID: 1441074955}
+  - component: {fileID: 1441074956}
   m_Layer: 0
   m_Name: motoFrame
   m_TagString: Untagged
@@ -1741,7 +1763,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1032163527
   m_SortingLayer: 10
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 59981fa46a74fd746a82ee94c37ae61b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1761,8 +1783,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441074947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1397, y: 3, z: 55}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: -1387.6, y: -2, z: 17}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 758882619}
@@ -1820,6 +1842,34 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
+--- !u!114 &1441074955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441074947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb879d1e39ef04509a734564eed9bb02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1441074949}
+  forwardForce: 1000
+--- !u!114 &1441074956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441074947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f0c1038901647a5be3b980afd3d6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1441074949}
+  backForce: -100
 --- !u!1 &1497125544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2069,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.336392, y: 0.502666}
+  m_Offset: {x: 10.336392, y: 0.13606334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2030,7 +2080,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.851187, y: 3.5651236}
+  m_Size: {x: 31.851187, y: 2.8319178}
   m_EdgeRadius: 0
 --- !u!1 &1682575212
 GameObject:
@@ -2146,7 +2196,6 @@ GameObject:
   - component: {fileID: 1822529442}
   - component: {fileID: 1822529441}
   - component: {fileID: 1822529440}
-  - component: {fileID: 1822529443}
   m_Layer: 5
   m_Name: GasButton
   m_TagString: Untagged
@@ -2218,9 +2267,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1822529443}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1441074955}
+        m_TargetAssemblyTypeName: MotoSpeedScript, Assembly-CSharp
+        m_MethodName: FixedUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2268,20 +2317,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822529438}
   m_CullTransparentMesh: 1
---- !u!114 &1822529443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822529438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb879d1e39ef04509a734564eed9bb02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1441074949}
-  forwardForce: 100
 --- !u!1 &1840575716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2329,6 @@ GameObject:
   - component: {fileID: 1840575720}
   - component: {fileID: 1840575719}
   - component: {fileID: 1840575718}
-  - component: {fileID: 1840575721}
   m_Layer: 5
   m_Name: StopButton
   m_TagString: Untagged
@@ -2366,13 +2400,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 86f0c1038901647a5be3b980afd3d6cd, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1441074956}
+        m_TargetAssemblyTypeName: BackSpeedButtton, Assembly-CSharp
+        m_MethodName: FixedUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2416,20 +2450,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840575716}
   m_CullTransparentMesh: 1
---- !u!114 &1840575721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840575716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86f0c1038901647a5be3b980afd3d6cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1441074949}
-  backForce: -100
 --- !u!1 &1903475552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,7 +2461,7 @@ GameObject:
   - component: {fileID: 1903475553}
   - component: {fileID: 1903475554}
   - component: {fileID: 1903475556}
-  - component: {fileID: 1903475557}
+  - component: {fileID: 1903475555}
   m_Layer: 0
   m_Name: stok
   m_TagString: Untagged
@@ -2457,8 +2477,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903475552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9940001, y: -0.32300004, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 0.9615, y: -0.2742, z: 0}
+  m_LocalScale: {x: 1.2097, y: 1.199, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1441074951}
@@ -2504,7 +2524,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1007043305
   m_SortingLayer: 11
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: e895aa7a8a4ae2c4ca27127a84cf4710, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2516,8 +2536,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!895512359 &1903475556
-AimConstraint:
+--- !u!1183024399 &1903475555
+LookAtConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2527,21 +2547,16 @@ AimConstraint:
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AimVector: {x: 0, y: 0, z: 1}
-  m_UpVector: {x: 0, y: 1, z: 0}
-  m_WorldUpVector: {x: 0, y: 1, z: 0}
+  m_Roll: 0
   m_WorldUpObject: {fileID: 0}
-  m_UpType: 0
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
+  m_UseUpObject: 0
   m_IsContraintActive: 0
   m_IsLocked: 0
   m_Sources:
   - sourceTransform: {fileID: 1441074951}
     weight: 1
---- !u!1773428102 &1903475557
-ParentConstraint:
+--- !u!1818360608 &1903475556
+PositionConstraint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2549,18 +2564,11 @@ ParentConstraint:
   m_GameObject: {fileID: 1903475552}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: -0.09353677, y: 0.20348111, z: 0}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
+  m_TranslationAtRest: {x: 0.9615, y: -0.2742, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
   m_IsContraintActive: 0
   m_IsLocked: 0
   m_Sources:
@@ -2867,9 +2875,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -349819527
-  m_SortingLayer: 12
-  m_SortingOrder: 0
+  m_SortingLayerID: -1032163527
+  m_SortingLayer: 10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 9918356e07003e94586a7091efeec5c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

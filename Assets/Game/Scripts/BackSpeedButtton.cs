@@ -8,7 +8,7 @@ public class BackSpeedButtton : MonoBehaviour
     public float backForce = -100f;
 
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         if (Input.GetButton("StopButton"))
         {

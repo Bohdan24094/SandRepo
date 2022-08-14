@@ -7,7 +7,7 @@ public class MotoSpeedScript : MonoBehaviour
     public Rigidbody2D rb;
     public float forwardForce = 100f;
     
-private void FixedUpdate()
+public void FixedUpdate()
     {
         if (Input.GetButton("GasButton"))
         {
