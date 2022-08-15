@@ -41,42 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Bg Layer
     uniqueID: 395554527
     locked: 0
-  - name: New Layer 2
+  - name: Beach Layer
     uniqueID: 3032263585
     locked: 0
-  - name: New Layer 3
+  - name: Road Layer
     uniqueID: 3686177231
     locked: 0
-  - name: New Layer 4
+  - name: 'Bike Layer '
     uniqueID: 2022851651
-    locked: 0
-  - name: New Layer 5
-    uniqueID: 3017500765
-    locked: 0
-  - name: New Layer 6
-    uniqueID: 3663063983
-    locked: 0
-  - name: New Layer 7
-    uniqueID: 4215412479
-    locked: 0
-  - name: New Layer 8
-    uniqueID: 3240590213
-    locked: 0
-  - name: New Layer 9
-    uniqueID: 3351001233
-    locked: 0
-  - name: New Layer 10
-    uniqueID: 3262803769
-    locked: 0
-  - name: New Layer 11
-    uniqueID: 1007043305
-    locked: 0
-  - name: New Layer 12
-    uniqueID: 3945147769
-    locked: 0
-  - name: New Layer 13
-    uniqueID: 2982852997
     locked: 0
