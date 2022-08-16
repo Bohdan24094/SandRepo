@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public float yOffset = 1f;
-    public Transform target;
+    [SerializeField] private float followSpeed = 2f;
+    [SerializeField] private Transform target;
+    
+    private Vector3 offset;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+        offset = transform.position - target.position;
+    }
+
+    private void Update()
+    {
+        Vector3 newPos = target.position + offset;
+        transform.position = Vector3.Lerp(transform.position, newPos, followSpeed * Time.deltaTime);
     }
 }
 
