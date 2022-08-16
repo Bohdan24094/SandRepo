@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotoSpeedScript : MonoBehaviour
+public class GusButtonScript : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float forwardForce = 100f;
-    
-public void FixedUpdate()
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float speed = 1000f;
+
+
+
+    public void Update()
     {
-        if (Input.GetButton("GasButton"))
-        {
-            rb.AddForce(new Vector2(forwardForce, 0f));
-        }
-        
+       // if (Input.GetButtonDown("GusButton"))
+       // {
+            rb.AddForce(new Vector2(speed, 0f));
+
+       // }
     }
 }
